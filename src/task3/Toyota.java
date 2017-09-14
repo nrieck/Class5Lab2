@@ -3,19 +3,41 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package task2;
+package task3;
 
 /**
  *
  * @author Nick
  */
-public abstract class Car {
+public class Toyota {
     private String carColor;
     private String numberOfSeats;
-
-    //This gets the car's look at will change while going through the classes
-    public abstract void getCarLook();
     
+    private String heightInInches;
+    private String WidthInInches;
+    
+   
+    public void getCarLook() {
+        System.out.println("Basic car with Toyota Logo"); 
+    }
+
+    public String getHeightInInches() {
+        return heightInInches;
+    }
+
+    public void setHeightInInches(String heightInInches) {
+        this.heightInInches = heightInInches;
+    }
+
+    public String getWidthInInches() {
+        return WidthInInches;
+    }
+
+    public void setWidthInInches(String WidthInInches) {
+        this.WidthInInches = WidthInInches;
+    }
+
+    //
     public String getCarColor() {
         return carColor;
     }
@@ -31,4 +53,6 @@ public abstract class Car {
     public void setNumberOfSeats(String numberOfSeats) {
         this.numberOfSeats = numberOfSeats;
     }
+    
+    
 }
