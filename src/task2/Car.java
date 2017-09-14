@@ -21,6 +21,9 @@ public abstract class Car {
     }
 
     public void setCarColor(String carColor) {
+        if(carColor == null || carColor.isEmpty()) {
+            throw new IllegalArgumentException("color is required");
+        }
         this.carColor = carColor;
     }
 
@@ -29,6 +32,9 @@ public abstract class Car {
     }
 
     public void setNumberOfSeats(String numberOfSeats) {
+        if(numberOfSeats == null || numberOfSeats.isEmpty()) {
+            throw new IllegalArgumentException("Number Of seats required");
+        }
         this.numberOfSeats = numberOfSeats;
     }
 }

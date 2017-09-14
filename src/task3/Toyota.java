@@ -14,7 +14,7 @@ public class Toyota {
     private String numberOfSeats;
     
     private String heightInInches;
-    private String WidthInInches;
+    private String widthInInches;
     
    
     public void getCarLook() {
@@ -26,15 +26,21 @@ public class Toyota {
     }
 
     public void setHeightInInches(String heightInInches) {
+        if(heightInInches == null || heightInInches.isEmpty()) {
+            throw new IllegalArgumentException("Heigh is required");
+        }
         this.heightInInches = heightInInches;
     }
 
     public String getWidthInInches() {
-        return WidthInInches;
+        return widthInInches;
     }
 
-    public void setWidthInInches(String WidthInInches) {
-        this.WidthInInches = WidthInInches;
+    public void setWidthInInches(String widthInInches) {
+        if(widthInInches == null || widthInInches.isEmpty()) {
+            throw new IllegalArgumentException("Width is required");
+        }
+        this.widthInInches = widthInInches;
     }
 
     //
@@ -43,6 +49,9 @@ public class Toyota {
     }
 
     public void setCarColor(String carColor) {
+        if(carColor == null || carColor.isEmpty()) {
+            throw new IllegalArgumentException("color is required");
+        }
         this.carColor = carColor;
     }
 
@@ -51,6 +60,9 @@ public class Toyota {
     }
 
     public void setNumberOfSeats(String numberOfSeats) {
+        if(numberOfSeats == null || numberOfSeats.isEmpty()) {
+            throw new IllegalArgumentException("Number Of seats required");
+        }
         this.numberOfSeats = numberOfSeats;
     }
     
